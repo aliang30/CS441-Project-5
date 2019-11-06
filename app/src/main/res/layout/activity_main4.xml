@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/traffic"
-    tools:context=".Main2Activity">
+    tools:context=".Main4Activity">
 
     <TextView
         android:id="@+id/text"
@@ -12,12 +12,24 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
-        android:text="CHOOSE YOUR VEHICLE!"
-        android:textColor="#FFFFFF"
-        android:textSize="40sp"
+        android:text="GAME OVER"
+        android:textColor="#000000"
+        android:textSize="50dp"
         android:textStyle="bold"
         android:typeface="serif" />
 
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="150dp"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:typeface="serif" />
 
 
     <Button
@@ -26,20 +38,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="330dp"
         android:background="@drawable/button_design"
-        android:text="Pick Red Audi"
-        android:textColor="@android:color/white" />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_marginTop="300dp"
-        android:background="@drawable/button_design"
-        android:text="Pick Black Viper"
+        android:text="Retry"
         android:textColor="@android:color/white" />
 
     <Button
@@ -50,7 +51,7 @@
         android:gravity="center"
         android:layout_marginTop="400dp"
         android:background="@drawable/button_design"
-        android:text="Go back"
+        android:text="Go back to home"
         android:textColor="@android:color/white" />
 
 </RelativeLayout>

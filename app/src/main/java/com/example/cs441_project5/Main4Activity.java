@@ -1,6 +1,6 @@
 package com.example.cs441_project5;
 
-//GameOver Screen for red car players
+//GameOver Screen for black car players
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Main3Activity extends AppCompatActivity {
+public class Main4Activity extends AppCompatActivity {
 
     private Button retry;
     private Button mainMenu;
@@ -38,7 +38,7 @@ public class Main3Activity extends AppCompatActivity {
 
     //Opens game screen
     public void openActivity() {
-        Intent intent = new Intent (this, RedCar.class);
+        Intent intent = new Intent (this, BlackCar.class);
         startActivity(intent);
     }
 
