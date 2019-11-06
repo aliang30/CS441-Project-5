@@ -44,12 +44,23 @@
         android:textColor="@android:color/white" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
         android:layout_marginTop="400dp"
+        android:background="@drawable/button_design"
+        android:text="Choose a different car"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="470dp"
         android:background="@drawable/button_design"
         android:text="Go back to home"
         android:textColor="@android:color/white" />

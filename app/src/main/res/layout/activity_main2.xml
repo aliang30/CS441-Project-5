@@ -38,7 +38,7 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:layout_marginTop="300dp"
-        android:background="@drawable/button_design"
+        android:background="@drawable/button_design2"
         android:text="Pick Black Viper"
         android:textColor="@android:color/white" />
 

@@ -12,6 +12,7 @@ import android.widget.Button;
 public class Main4Activity extends AppCompatActivity {
 
     private Button retry;
+    private Button chooseCar;
     private Button mainMenu;
 
     @Override
@@ -24,6 +25,14 @@ public class Main4Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 openActivity();
+            }
+        });
+
+        chooseCar = (Button) findViewById(R.id.button1);
+        chooseCar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openActivity1();
             }
         });
 
@@ -41,6 +50,13 @@ public class Main4Activity extends AppCompatActivity {
         Intent intent = new Intent (this, BlackCar.class);
         startActivity(intent);
     }
+
+    //Opens choose car screen
+    public void openActivity1() {
+        Intent intent = new Intent (this, Main2Activity.class);
+        startActivity(intent);
+    }
+
 
     //Opens main menu
     public void openActivity2() {
