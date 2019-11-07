@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     tools:context=".Main3Activity">
 
     <TextView
@@ -14,7 +15,7 @@
         android:layout_marginTop="100dp"
         android:gravity="center"
         android:text="GAME OVER"
-        android:textColor="#990707"
+        android:textColor="#FFFFFF"
         android:textSize="50dp"
         android:textStyle="bold"
         android:typeface="serif" />
