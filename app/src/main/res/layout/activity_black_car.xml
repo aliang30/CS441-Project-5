@@ -8,18 +8,6 @@
     tools:context=".BlackCar">
 
 
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:text="Game Screen"
-        android:textColor="#FFF8F8"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:typeface="serif" />
-
     <Button
         android:id="@+id/button"
         android:layout_width="180dp"
@@ -28,7 +16,7 @@
         android:layout_alignParentBottom="true"
         android:layout_gravity="center"
         android:layout_marginRight="85dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="30dp"
         android:background="@drawable/button_design"
         android:gravity="center"
         android:text="END GAME"
