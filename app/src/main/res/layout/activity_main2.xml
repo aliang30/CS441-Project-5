@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="50dp"
         android:gravity="center"
         android:text="CHOOSE YOUR VEHICLE!"
         android:textColor="#FFFFFF"
@@ -19,16 +20,15 @@
         android:typeface="serif" />
 
 
-
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:gravity="center"
         android:layout_marginTop="200dp"
         android:background="@drawable/button_design"
-        android:text="Pick Red Audi"
+        android:gravity="center"
+        android:text=" Red Audi"
         android:textColor="@android:color/white" />
 
     <Button
@@ -36,10 +36,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:gravity="center"
         android:layout_marginTop="300dp"
         android:background="@drawable/button_design2"
-        android:text="Pick Black Viper"
+        android:gravity="center"
+        android:text="Black Viper"
         android:textColor="@android:color/white" />
 
     <Button
@@ -47,10 +47,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:gravity="center"
         android:layout_marginTop="400dp"
         android:background="@drawable/button_design"
-        android:text="Go back"
+        android:gravity="center"
+        android:text="Home"
         android:textColor="@android:color/white" />
 
 </RelativeLayout>
