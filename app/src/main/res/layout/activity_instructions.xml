@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:layout_x="100dp"
     android:layout_y="50dp"
-    android:background="#030303"
+    android:background="@drawable/traffic"
     tools:context=".Instructions">
 
     <Button
@@ -17,8 +17,8 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_gravity="center|center_horizontal"
-        android:layout_marginRight="90dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="200dp"
         android:background="@drawable/button_design"
         android:gravity="center|center_horizontal|center_vertical"
         android:text="Home"
@@ -47,16 +47,6 @@
         android:text="You are late for an important event! Dodge the obstacles to make it to your destination. Be careful! 3 hits and you will fail."
         android:textColor="#FFFFFFFF"
         android:textSize="25sp" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="350dp"
-        android:adjustViewBounds="true"
-        android:cropToPadding="false"
-        android:scaleType="fitCenter"
-        app:srcCompat="@drawable/supercar_2_3" />
 
 
 </RelativeLayout>
