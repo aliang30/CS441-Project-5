@@ -34,7 +34,7 @@
         android:src="@drawable/road" />
 
     <ImageView
-        android:id="@+id/black_viper"
+        android:id="@+id/audi"
         android:layout_width="200dp"
         android:layout_height="260dp"
         android:layout_alignParentLeft="true"
@@ -43,40 +43,11 @@
 
     <ImageView
         android:id="@+id/cone"
-        android:layout_width="200dp"
-        android:layout_height="260dp"
+        android:layout_width="100dp"
+        android:layout_height="160dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:contentDescription="@string/app_name"
         android:src="@drawable/cone" />
-
-    <ImageView
-        android:id="@+id/taxi"
-        android:layout_width="200dp"
-        android:layout_height="260dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:contentDescription="@string/app_name"
-        android:src="@drawable/taxi" />
-
-    <ImageView
-        android:id="@+id/truck"
-        android:layout_width="200dp"
-        android:layout_height="260dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:contentDescription="@string/app_name"
-        android:src="@drawable/truck" />
-
-    <ImageView
-        android:id="@+id/ambulance"
-        android:layout_width="200dp"
-        android:layout_height="260dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:contentDescription="@string/app_name"
-        android:src="@drawable/ambulance" />
-
-
 
 </RelativeLayout>

@@ -34,7 +34,7 @@ public class Main2Activity extends AppCompatActivity {
         play2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openActivity();
+                openActivity1();
             }
         });
 

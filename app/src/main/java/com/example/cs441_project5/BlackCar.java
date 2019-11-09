@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.os.Handler;
@@ -22,8 +21,6 @@ import java.util.TimerTask;
 
 public class BlackCar extends AppCompatActivity {
 
-    int i = 0;
-
     private ViewGroup mainLayout;
 
     private int screenWidth;
@@ -40,26 +37,11 @@ public class BlackCar extends AppCompatActivity {
     private int yDelta;
 
     private ImageView car;
-    private ImageView ambulance;
-    private ImageView truck;
-    private ImageView taxi;
-    private ImageView police;
+    private ImageView cone;
 
-    //Coordinates for ambulance
-    private float ambulanceX;
-    private float ambulanceY;
-
-    //Coordinates for truck
-    private float truckX;
-    private float truckY;
-
-    //Coordinates for taxi
-    private float taxiX;
-    private float taxiY;
-
-    //Coordinates for police
-    private float policeX;
-    private float policeY;
+    //Coordinates for cone
+    private float coneX;
+    private float coneY;
 
     private Handler handler = new Handler();
     private Timer timer = new Timer();
@@ -82,11 +64,7 @@ public class BlackCar extends AppCompatActivity {
 
 
         car = findViewById(R.id.black_viper);
-        truck = findViewById(R.id.truck);
-        taxi = findViewById(R.id.taxi);
-        police = findViewById(R.id.police);
-        ambulance = findViewById(R.id.ambulance);
-
+        cone = findViewById(R.id.cone);
 
         car.setOnTouchListener(onTouchListener());
 
@@ -98,23 +76,13 @@ public class BlackCar extends AppCompatActivity {
         screenWidth = size.x;
         screenHeight = size.y;
 
-        //Giving both apples initial coordinates
         road.setX(80.0f);
         road.setY(screenHeight + 80.0f);
 
         //Assigning initial coordinates
-        truck.setX(80.0f);
-        truck.setY(screenHeight + 80.0f);
 
-        taxi.setX(80.0f);
-        taxi.setY(screenHeight + 80.0f);
-
-        police.setX(80.0f);
-        police.setY(screenHeight + 80.0f);
-
-        ambulance.setX(80.0f);
-        ambulance.setY(screenHeight + 80.0f);
-
+        cone.setX(80.0f);
+        cone.setY(screenHeight + 80.0f);
 
         //Running road movement
         timer.schedule(new TimerTask() {
@@ -140,7 +108,7 @@ public class BlackCar extends AppCompatActivity {
                     }
                 });
             }
-        }, 0, 20);
+        }, 1, 20);
 
     }
 
@@ -164,47 +132,15 @@ public class BlackCar extends AppCompatActivity {
 
     //Car movement
     public void carPos() {
+        //cone speed
+        coneY = coneY + 40;
 
-        //ambulance speed
-        ambulanceY = ambulanceY + 40;
-
-        if(ambulance.getY() > screenHeight) {
-            ambulanceX = (float) Math.floor(Math.random() * (screenWidth - ambulance.getWidth()));
-            ambulanceY = -100.0f;
+        if(cone.getY() > screenHeight) {
+            coneX = (float) Math.floor(Math.random() * (screenWidth - cone.getWidth()));
+            coneY = -100.0f;
         }
-        ambulance.setX(ambulanceX);
-        ambulance.setY(ambulanceY);
-
-
-        //truck speed
-        truckY = truckY + 30;
-
-        if(truck.getY() > screenHeight) {
-            truckX = (float) Math.floor(Math.random() * (screenWidth - truck.getWidth()));
-            truckY = -100.0f;
-        }
-        truck.setX(truckX);
-        truck.setY(truckY);
-
-        //taxi apple speed
-        taxiY = taxiY + 30;
-
-        if(taxi.getY() > screenHeight) {
-            taxiX = (float) Math.floor(Math.random() * (screenWidth - taxi.getWidth()));
-            taxiY = -100.0f;
-        }
-        taxi.setX(taxiX);
-        taxi.setY(taxiY);
-
-        //police apple speed
-        policeY = policeY + 30;
-
-        if(police.getY() > screenHeight) {
-            policeX = (float) Math.floor(Math.random() * (screenWidth - police.getWidth()));
-            policeY = -100.0f;
-        }
-        police.setX(policeX);
-        police.setY(policeY);
+        cone.setX(coneX);
+        cone.setY(coneY);
     }
 
 
@@ -225,13 +161,16 @@ public class BlackCar extends AppCompatActivity {
 
                     case MotionEvent.ACTION_UP:
                         break;
-
+                    case MotionEvent.ACTION_POINTER_DOWN:
+                        break;
+                    case MotionEvent.ACTION_POINTER_UP:
+                        break;
                     case MotionEvent.ACTION_MOVE:
                         RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) view.getLayoutParams();
                         layoutParams.leftMargin = x - xDelta;
                         layoutParams.topMargin = y - yDelta;
-                        layoutParams.rightMargin = 0;
-                        layoutParams.bottomMargin = 0;
+                        layoutParams.rightMargin = -500;
+                        layoutParams.bottomMargin = -500;
                         view.setLayoutParams(layoutParams);
                         break;
                 }
