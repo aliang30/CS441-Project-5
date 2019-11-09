@@ -132,6 +132,12 @@ public class RedCar extends AppCompatActivity {
 
     //Car movement
     public void carPos() {
+        //Hit collision to cone
+        if (hitDetect(coneX, coneY)) {
+            //erase cone object
+            coneX = -500;
+        }
+
         //cone speed
         coneY = coneY + 40;
 
@@ -143,6 +149,14 @@ public class RedCar extends AppCompatActivity {
         cone.setY(coneY);
     }
 
+    //returns true if car collides with a cone
+    public boolean hitDetect(float x, float y) {
+        if (car.getX() < x && x < (car.getX() + car.getWidth()) &&
+                car.getY() < y && y < (car.getY() + car.getHeight())) {
+            return true;
+        }
+        return false;
+    }
 
     private OnTouchListener onTouchListener() {
         return new OnTouchListener() {
