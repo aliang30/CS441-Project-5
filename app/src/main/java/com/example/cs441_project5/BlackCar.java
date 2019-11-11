@@ -152,9 +152,9 @@ public class BlackCar extends AppCompatActivity {
             text_lives.setText("Lives: " + lives);
             if(lives == 0){
                 Intent intent = new Intent (this, Main4Activity.class);
+                intent.putExtra("SCORE", score);
                 startActivity(intent);
             }
-
         }
         else{
             score += 1;

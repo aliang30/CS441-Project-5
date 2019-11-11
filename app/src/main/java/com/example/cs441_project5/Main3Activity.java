@@ -5,6 +5,7 @@ package com.example.cs441_project5;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -21,6 +22,13 @@ public class Main3Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
+
+        TextView score = findViewById(R.id.score);
+
+        int score1 = getIntent().getIntExtra("SCORE", 0);
+
+        score.setTextColor(Color.WHITE);
+        score.setText("Score : " + score1);
 
         retry = (Button) findViewById(R.id.button);
         retry.setOnClickListener(new View.OnClickListener() {

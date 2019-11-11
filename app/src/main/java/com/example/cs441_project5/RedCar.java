@@ -41,9 +41,6 @@ public class RedCar extends AppCompatActivity {
     private ImageView car;
     private ImageView cone;
 
-
-
-
     //Coordinates for cone
     private float coneX;
     private float coneY;
@@ -77,7 +74,6 @@ public class RedCar extends AppCompatActivity {
                 openActivity();
             }
         });
-
 
         car = findViewById(R.id.audi);
         cone = findViewById(R.id.cone);
@@ -159,6 +155,7 @@ public class RedCar extends AppCompatActivity {
             text_lives.setText("Lives: " + lives);
             if(lives == 0){
                 Intent intent = new Intent (this, Main3Activity.class);
+                intent.putExtra("SCORE", score);
                 startActivity(intent);
             }
 
