@@ -16,6 +16,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.view.View.OnTouchListener;
+import android.widget.TextView;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -39,18 +41,32 @@ public class RedCar extends AppCompatActivity {
     private ImageView car;
     private ImageView cone;
 
+
+
+
     //Coordinates for cone
     private float coneX;
     private float coneY;
 
+
+    private TextView text_score;
+    private TextView text_lives;
+
+
     private Handler handler = new Handler();
     private Timer timer = new Timer();
+
+    private int score = 0;
+    private int lives = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_red_car);
         mainLayout = (RelativeLayout) findViewById(R.id.main);
+
+        text_score = findViewById(R.id.score);
+        text_lives = findViewById(R.id.lives);
 
         road = findViewById(R.id.line);
 
@@ -65,6 +81,7 @@ public class RedCar extends AppCompatActivity {
 
         car = findViewById(R.id.audi);
         cone = findViewById(R.id.cone);
+
 
         car.setOnTouchListener(onTouchListener());
 
@@ -110,6 +127,7 @@ public class RedCar extends AppCompatActivity {
             }
         }, 1, 20);
 
+
     }
 
     public void openActivity() {
@@ -132,11 +150,31 @@ public class RedCar extends AppCompatActivity {
 
     //Car movement
     public void carPos() {
+
         //Hit collision to cone
         if (hitDetect(coneX, coneY)) {
             //erase cone object
             coneX = -500;
+            lives--;
+            text_lives.setText("Lives: " + lives);
+            if(lives == 0){
+                Intent intent = new Intent (this, Main3Activity.class);
+                startActivity(intent);
+            }
+
         }
+        else{
+            score += 10;
+            text_score.setText("Score: " + score);
+            if(score == 1000)
+            {
+                Intent intent2 = new Intent(this, WinScreen.class);
+                startActivity(intent2);
+            }
+        }
+
+
+
 
         //cone speed
         coneY = coneY + 40;

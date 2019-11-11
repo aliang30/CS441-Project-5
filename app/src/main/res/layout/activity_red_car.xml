@@ -16,8 +16,8 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_gravity="center"
-        android:layout_marginRight="26dp"
-        android:layout_marginBottom="19dp"
+        android:layout_marginRight="175dp"
+        android:layout_marginBottom="600dp"
         android:background="@android:drawable/ic_media_pause"
         android:gravity="center"
         android:textColor="@android:color/white"
@@ -29,6 +29,8 @@
         android:layout_height="600dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="53dp"
         android:contentDescription="@string/app_name"
         android:src="@drawable/road" />
 
@@ -36,8 +38,10 @@
         android:id="@+id/audi"
         android:layout_width="200dp"
         android:layout_height="260dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="false"
+        android:layout_marginLeft="116dp"
+        android:layout_marginTop="507dp"
         android:src="@drawable/audi" />
 
     <ImageView
@@ -48,5 +52,27 @@
         android:layout_alignParentTop="true"
         android:contentDescription="@string/app_name"
         android:src="@drawable/cone" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="330dp"
+        android:layout_marginTop="10dp"
+        android:text="Score: 0"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/lives"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:text="Lives: 3"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

@@ -11,16 +11,15 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="180dp"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="59dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_gravity="center"
-        android:layout_marginRight="85dp"
-        android:layout_marginBottom="30dp"
-        android:background="@drawable/button_design"
+        android:layout_marginRight="165dp"
+        android:layout_marginBottom="600dp"
+        android:background="@android:drawable/ic_media_pause"
         android:gravity="center"
-        android:text="END GAME "
         android:textColor="@android:color/white"
         android:textSize="14sp" />
 
@@ -39,6 +38,8 @@
         android:layout_height="260dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:layout_marginLeft="126dp"
+        android:layout_marginTop="432dp"
         android:src="@drawable/black_viper" />
 
     <ImageView
@@ -49,5 +50,27 @@
         android:layout_alignParentTop="true"
         android:contentDescription="@string/app_name"
         android:src="@drawable/cone" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="10dp"
+        android:text="Score:0"
+        android:textColor="#FFFFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/lives"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:text="Lives:3"
+        android:textColor="#FFFFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

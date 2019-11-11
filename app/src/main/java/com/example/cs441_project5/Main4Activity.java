@@ -6,8 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class Main4Activity extends AppCompatActivity {
 
@@ -43,6 +45,39 @@ public class Main4Activity extends AppCompatActivity {
                 openActivity2();
             }
         });
+        blinkingEffect();
+    }
+
+    private void blinkingEffect() {
+        final Handler handler = new Handler();
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                //1000 millisecond = 1 second
+                int blinkTime = 1000;
+
+                try{Thread.sleep(blinkTime);}
+                catch (Exception e) {}
+
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        //Finds text and makes it disappear
+                        TextView text = findViewById(R.id.text);
+
+                        if(text.getVisibility() == View.VISIBLE){
+                            text.setVisibility(View.INVISIBLE);
+                        }
+                        else{
+                            //Makes text reappear
+                            text.setVisibility(View.VISIBLE);
+                        }
+                        blinkingEffect();
+                    }
+                });
+            }
+        }).start();
     }
 
     //Opens game screen

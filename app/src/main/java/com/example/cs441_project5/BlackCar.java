@@ -16,6 +16,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.view.View.OnTouchListener;
+import android.widget.TextView;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -43,6 +45,13 @@ public class BlackCar extends AppCompatActivity {
     private float coneX;
     private float coneY;
 
+
+    private TextView text_score;
+    private TextView text_lives;
+
+    private int score = 0;
+    private int lives = 3;
+
     private Handler handler = new Handler();
     private Timer timer = new Timer();
 
@@ -53,6 +62,9 @@ public class BlackCar extends AppCompatActivity {
         mainLayout = (RelativeLayout) findViewById(R.id.main);
 
         road = findViewById(R.id.line);
+
+        text_score = findViewById(R.id.score);
+        text_lives = findViewById(R.id.lives);
 
         button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
@@ -136,6 +148,22 @@ public class BlackCar extends AppCompatActivity {
         if (hitDetect(coneX, coneY)) {
             //erase cone object
             coneX = -500;
+            lives--;
+            text_lives.setText("Lives: " + lives);
+            if(lives == 0){
+                Intent intent = new Intent (this, Main4Activity.class);
+                startActivity(intent);
+            }
+
+        }
+        else{
+            score += 10;
+            text_score.setText("Score: " + score);
+            if(score == 10000)
+            {
+                Intent intent2 = new Intent(this, WinScreen.class);
+                startActivity(intent2);
+            }
         }
 
         //cone speed
