@@ -164,13 +164,12 @@ public class RedCar extends AppCompatActivity {
 
         }
         else{
-            score += 10;
+            score += 1;
             text_score.setText("Score: " + score);
-            if(score == 1000)
-            {
-                Intent intent2 = new Intent(this, WinScreen.class);
-                startActivity(intent2);
-            }
+           // if(score == 1000){
+           //     Intent intent2 = new Intent(this, WinScreen.class);
+           //     startActivity(intent2);
+           // }
         }
 
 
